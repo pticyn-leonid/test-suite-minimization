@@ -1,7 +1,8 @@
 package pticyn.tsm.optimization;
 
 import lombok.Getter;
-import pticyn.tsm.model.MatrixCoverage;
+import lombok.Setter;
+import pticyn.tsm.coverage.MatrixCoverage;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -11,10 +12,11 @@ import static pticyn.tsm.optimization.Configuration.COVERAGE_PENALTY;
 import static pticyn.tsm.optimization.Configuration.SEED;
 
 @Getter
+@Setter
 public class Solution {
     private final MatrixCoverage matrix;
     private final boolean[] selectedTests;
-    private final Random random = new Random(SEED);
+    private Random random = new Random(SEED);
 
     public Solution(MatrixCoverage matrix) {
         this.matrix = matrix;

@@ -1,6 +1,5 @@
 package pticyn.tsm.optimization;
 
-
 import java.util.Random;
 
 import static pticyn.tsm.optimization.Configuration.*;
@@ -20,7 +19,7 @@ public class SimulatedAnnealing implements OptimizationAlgorithm {
 
     @Override
     public Solution optimize() {
-        Random rand = new Random(SEED);
+        Random rand = solution.getRandom();
         while (tempCurrent > tempEnd) {
             Solution newSolution = solution.makeNewSolution();
             double delta = newSolution.getEnergy() - solution.getEnergy();

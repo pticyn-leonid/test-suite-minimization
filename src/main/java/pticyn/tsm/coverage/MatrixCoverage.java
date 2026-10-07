@@ -1,4 +1,4 @@
-package pticyn.tsm.model;
+package pticyn.tsm.coverage;
 
 import lombok.Getter;
 

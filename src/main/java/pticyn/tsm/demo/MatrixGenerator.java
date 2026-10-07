@@ -2,11 +2,9 @@ package pticyn.tsm.demo;
 
 import java.util.Random;
 
-import static pticyn.tsm.optimization.Configuration.SEED;
-
 public final class MatrixGenerator {
-    public static boolean[][] generate(int row, int col) {
-        Random rand = new Random(SEED);
+    public static boolean[][] generate(int row, int col, byte seed) {
+        Random rand = new Random(seed);
         boolean[][] matrix = new boolean[row][col];
 
         for (int i = 0; i < row; i++)
@@ -16,7 +14,7 @@ public final class MatrixGenerator {
         return matrix;
     }
 
-    public static boolean[][] generate(int n) {
-        return generate(n, n);
+    public static boolean[][] generate(int n, byte seed) {
+        return generate(n, n, seed);
     }
 }
